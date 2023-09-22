@@ -21,3 +21,45 @@
          url("/static/fonts/Inter-Regular.woff2") format("woff");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "Arial";
+    src: local('Arial'), local('Arial-Bold'), local('Arial Bold'),
+         url("/static/fonts/arialbd.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local('Arial'), local('Arial-Italic'), local('Arial Italic'),
+         url("/static/fonts/ariali.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Arial";
+    src: local('Arial'), local('Arial-Regular'), local('Arial Regular'),
+         url("/static/fonts/arial.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Book Antiqua";
+    src: local('Book Antiqua'), local('Book-Antiqua-Regular'), local('Book Antiqua Regular'),
+         url("/static/fonts/BKANT.TTF") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Book Antiqua";
+    src: local('Book Antiqua'), local('Book-Antiqua-Italic'), local('Book Antiqua Italic'),
+         url("/static/fonts/ANTQUAI.TTF") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: local('Roboto'), local('Roboto-Regular'), local('Roboto Regular'),
+         url("/static/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}

@@ -1,19 +1,25 @@
 @import "./global.css";
 @import "./fonts.css";
 @import "./utils.css";
+@import url(fonts.css);
 
-.head-list {
-    display: flex;
-    list-style-type: none;
+h1 {
+    font-size: 64px;
+    color: #1F3F68;
 }
 
-.head-list>li {
-    margin: 15px;
+h3 {
+    font-size: 36px;
+    text-align: center;
 }
 
-h1,
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68
+}
+
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -22,48 +28,80 @@ h6 {
 
 p {
     text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
+}
+
+.text-with-fifteen-words>p {
+    margin: 0px 100px;
+    text-align: center;
+}
+
+.second-header {
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+}
+
+.form>.form-input>.input-box {
+    border: 5px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+}
+
+.form {
+    display: block;
+    text-align: center;
+    background-image: url(../img/background-form.jpg);
+    background-size: 1500px;
+}
+
+.submit-button {
+    background: #5A98D0;
+    border-radius: 17px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #4875e6 0%, #8d54e8 100%);
+    padding: 15px 35px;
+    border: 0px;
+    margin-top: 5px;
 }
 
 .header-sections {
     display: block;
 }
 
+.header-sections>.head-list {
+    list-style: none;
+    display: flex;
+    background: linear-gradient(#f4f8f8 0%, #3b8181 100%);
+    /* float: left; */
+    
+}
+
+.head-list>.breadcrumb-item {
+    box-shadow: 2px 0 2px #FFF, 4px 0 black;
+    padding: 0px 30px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    line-height: 50px;  
+}
+
 .header-sections>img {
-    float: right;
     padding: 10px;
-    width: 75px;
-    height: 75px;
-}
-
-.navigations {
-    display: inline-block;
-    text-align: center;
-}
-
-.navigations>nav {
-    float: left;
-}
-
-.text-from-book,
-.text-with-fifteen-words>p {
-    margin: 0px 100px;
-    text-align: center;
-}
-
-.form>form {
-    display: block;
-    text-align: center;
-}
-
-.form-input>input {
-    height: 25px;
-    width: 300px;
-    margin: 5px;
-}
-
-.form-input>textarea {
+    width: 100px;
     height: 100px;
-    width: 300px;
+}
+
+.head-list>.breadcrumb-item>a {
+    text-decoration: none;
+    color: black;
 }
 
 /* .test {
