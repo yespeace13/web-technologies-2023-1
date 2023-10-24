@@ -4,6 +4,62 @@
 @import url(fonts.css);
 
 
+header{
+    position: fixed;
+    background-color: white;
+    
+    
+}
+
+.main-head {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 100px;
+}
+
+.main-head>h3 {
+    text-transform: uppercase;
+    color: #2D66EE;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+}
+
+.main-head>ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.main-head>ul>li {
+    color: #2D66EE;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+}
+
+.main-head>ul>li>img {
+    vertical-align: middle;
+    height: 24;
+}
+
+.main-head>nav>ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.main-head>nav>ul>li {
+    padding: 0 0 0 24px;
+}
 
 /* .test {
     color: yellow !important;
