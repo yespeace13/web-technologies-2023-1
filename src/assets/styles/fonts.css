@@ -1,59 +1,59 @@
 @font-face {
     font-family: "Inter";
     src: local('Inter'), local('Inter-Bold'), local('Inter Bold'),
-         url("/static/fonts/Inter-Bold.ttf") format("truetype"),
-         url("/static/fonts/Inter-Bold.woff2") format("woff");
+         url("../../../static/fonts/Inter-Bold.ttf") format("truetype"),
+         url("../../../static/fonts/Inter-Bold.woff2") format("woff");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Inter";
     src: local('Inter'), local('Inter-Medium'), local('Inter Medium'),
-         url("/static/fonts/Inter-Medium.ttf") format("truetype"),
-         url("/static/fonts/Inter-Medium.woff2") format("woff");
+         url("../../../static/fonts/Inter-Medium.ttf") format("truetype"),
+         url("../../../static/fonts/Inter-Medium.woff2") format("woff");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Inter";
     src: local('Inter'), local('Inter-Regular'), local('Inter Regular'),
-         url("/static/fonts/Inter-Regular.ttf") format("truetype"),
-         url("/static/fonts/Inter-Regular.woff2") format("woff");
-    font-weight: 400;
+         url("../../../static/fonts/Inter-Regular.ttf") format("truetype"),
+         url("../../../static/fonts/Inter-Regular.woff2") format("woff");
+    font-weight: 400;   
 }
 
 @font-face {
     font-family: "Arial";
     src: local('Arial'), local('Arial-Bold'), local('Arial Bold'),
-         url("/static/fonts/arialbd.ttf") format("truetype");
+         url("../../../static/fonts/arialbd.ttf") format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Arial";
     src: local('Arial'), local('Arial-Italic'), local('Arial Italic'),
-         url("/static/fonts/ariali.ttf") format("truetype");
+         url("../../../static/fonts/ariali.ttf") format("truetype");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Arial";
     src: local('Arial'), local('Arial-Regular'), local('Arial Regular'),
-         url("/static/fonts/arial.ttf") format("truetype");
+         url("../../../static/fonts/arial.ttf") format("truetype");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Book Antiqua";
     src: local('Book Antiqua'), local('Book-Antiqua-Regular'), local('Book Antiqua Regular'),
-         url("/static/fonts/BKANT.TTF") format("truetype");
+         url("../../../static/fonts/BKANT.TTF") format("truetype");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "Book Antiqua";
     src: local('Book Antiqua'), local('Book-Antiqua-Italic'), local('Book Antiqua Italic'),
-         url("/static/fonts/ANTQUAI.TTF") format("truetype");
+         url("../../../static/fonts/ANTQUAI.TTF") format("truetype");
     font-weight: 400;
 }
 
@@ -61,5 +61,26 @@
     font-family: "Roboto";
     src: local('Roboto'), local('Roboto-Regular'), local('Roboto Regular'),
          url("/static/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local('SF-Pro-Text-Bold'), local('SF Pro Text Bold'),
+         url("../../../static/fonts/SFProText-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local('SF-Pro-Text-Italic'), local('SF Pro Text Italic'),
+         url("../../../static/fonts/SFProText-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF Pro Text'), local('SF-Pro-Text-Regular'), local('SF Pro Text Regular'),
+         url("../../../static/fonts/SFProText-Regular.ttf") format("truetype");
     font-weight: 400;
 }

@@ -1,0 +1,72 @@
+footer {
+    margin-left: 108px;
+    margin-right: 108px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-radius: 12px;
+    background: #101828;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* Блок подвала */
+footer>h3 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+}
+
+footer>p {
+    color: white;
+    padding-bottom: 24px;
+}
+
+footer>p>img {
+    vertical-align: middle;
+}
+
+.block-contact {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    padding-right: 130px;
+}
+
+.contact-item>p {
+    color: #98A2B3;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.contact-item>span {
+    color: #FFF;
+    font-family: SF Pro Text;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.contact-item>p>img {
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+
+
+footer>p>img{
+    margin-right: 12px;
+}

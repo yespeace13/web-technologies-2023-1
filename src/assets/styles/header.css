@@ -1,0 +1,75 @@
+header {
+    margin-left: 108px;
+    position: sticky;
+    z-index: 1;
+    top: 24px;
+}
+
+header>.main-head {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 0px 24px;
+    border-radius: 12px;
+    gap: 80px;
+    background-color: white;
+
+}
+
+.main-head>h3 {
+    text-transform: uppercase;
+    color: #2D66EE;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.154px;
+}
+
+/* первый список */
+.main-head>nav>ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.main-head>nav>ul>li {
+    padding: 0 0 0 24px;
+}
+
+.main-head>nav>ul>li>a {
+    text-decoration: none;
+    color: black;
+}
+
+/* второй список */
+.main-head>ul {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0 0 0 16px;
+}
+
+.main-head>ul>li {
+    color: #2D66EE;
+    font-family: SF Pro Text;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0px 0px 0px 16px;
+}
+
+.main-head>ul>li>img {
+    vertical-align: middle;
+    height: 24;
+    padding: 0 8px 0 0px;
+}
+
+.main-head>ul>li>a {
+    text-decoration: none;
+    color: #2D66EE;
+}

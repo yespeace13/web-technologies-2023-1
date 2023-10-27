@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>IT WEBSITE</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/main-form.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
 </head>
 
 <body>
@@ -24,39 +27,43 @@
                 </ul>
             </nav>
             <ul>
-                <li><img src="assets/icons/Phone icon.png">+7(111)111 11 11</li>
-                <li>+7(111)111 11 11</li>
-                <li><img src="assets/icons/Email icon.png"><a href="#">itcompany@mail.com<a></li>
+                <li><img src="assets/icons/smartphone_outline_24_blue.svg"></img>+7 (111) 111 11 11</li>
+                <li>+7 (111) 111 11 11</li>
+                <li><img src="assets/icons/mail_outline_24_blue.svg"></img><a href="#">itcompany@mail.com</a></li>
             </ul>
         </div>
     </header>
 
-    <hr>
-
-    <div>
-        <div class="block-main">
-            <h3>
-                Developments of mobile
-                applications and web services of
-                any complexity
-            </h3>
-            <p>
-                We create mobile applications for IOS, Android that transfer your business to mobile
-                applications of your customers' devicess
-            </p>
-        </div>
-        <div class="block-consultation">
-            <h3>
-                Leave your contacts and we will call you back
-                within 30 minutes
-            </h3>
-            <div class="consultation-form">
-                <form>
-                    <label>Phone number <input type="text" name="phone-number"></input></label>
-                    <label>Full name <input type="text" name="phone-number"></input></label>
-                    <input type="submit" value="Get consultation" />
-                </form>
+    <div class="block-main">
+        <div class="main-part">
+            <div class="main-text">
+                <h3>
+                    Developments of <span class="word-in-text">mobile</span>
+                    <span class="word-in-text">applications</span> and <span class="word-in-text">web services</span> of
+                    any complexity
+                </h3>
+                <p>
+                    We create mobile applications for IOS, Android that transfer your business to mobile
+                    applications of your customers' devicess
+                </p>
             </div>
+    
+            <div class="consultation">
+                <h3>
+                    Leave your contacts and we will call you back
+                    within 30 minutes
+                </h3>
+                <div class="consultation-form">
+                    <form>
+                        <label>Phone number<input type="tel" name="phone-number"></input></label>
+                        <label>Full name<input type="text" name="phone-number"></input></label>
+                        <input type="submit" value="Get consultation" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="screenshot-block">
+            <img style="margin-left: -120px;" src="assets/img/Group 1.png"/>
         </div>
     </div>
 
@@ -242,8 +249,8 @@
         <h2>Get the book for free by leaving your contacts</h2>
         <div class="book-form">
             <label>Phone number<input /></label>
-            <input placeholder="Your full name""/>
-            <label>email<input/></label>
+            <input placeholder="Your full name">
+            <label>email<input /></label>
             <button>Send me ebook to my mail</button>
         </div>
     </div>
@@ -251,30 +258,41 @@
     <hr>
 
     <div class=" block-faq">
-            <h2>FAQ</h2>
-            <div class="faq-questions">
-                <div class="faq-question">
-                    <h4>What is the cost of a mobile application?</h4>
-                    <p>...</p>
-                </div>
-                <div class="faq-question">
-                    <h4>How long will development take?</h4>
-                    <p>
-                        Development terms ...</p>
-                </div>
+        <h2>FAQ</h2>
+        <div class="faq-questions">
+            <div class="faq-question">
+                <h4>What is the cost of a mobile application?</h4>
+                <p>...</p>
+            </div>
+            <div class="faq-question">
+                <h4>How long will development take?</h4>
+                <p>
+                    Development terms ...</p>
             </div>
         </div>
-
-        <hr>
-
+    </div>
+    <footer>
+        <h3 style="text-transform: uppercase;">it website</h3>
         <div class="block-contact">
             <div class="contact-item">
-                <p>Contact nums</p>
-                <p>+7(778)395 90 26</p>
+                <p><img src="assets/icons/smartphone_outline_24.svg">Contact nums</p></img>
+                <span>+7(778)395 90 26</span>
             </div>
-
-            <p>We work thrughout world</p>
+            <div class="contact-item">
+                <p><img src="assets/icons/mail_outline_24.svg">Post</img></p>
+                <span>mail@mail.com</span>
+            </div>
+            <div class="contact-item">
+                <p><img src="assets/icons/place_outline_24.svg">Address</img></p>
+                <span>City city, street st. 90</span>
+            </div>
+            <div class="contact-item">
+                <p><img src="assets/icons/document_outline_24.svg">Leave a request</img></p>
+                <span>Leave a request</span>
+            </div>
         </div>
+        <p><img src="assets/icons/Vector.svg">We work throughout world</img></p>
+    </footer>
 </body>
 
 </html>
