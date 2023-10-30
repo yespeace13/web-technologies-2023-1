@@ -1,31 +1,29 @@
 /* Первый блок с текстом*/
 .block-main {
-    display: grid;
-    grid-template-columns: 54% 46%;
-    margin-top: -80px;
+    display: flex;
+    flex-direction: row;
     background-color: #F2F4F7;
-    height: 100%;
+    width: 100%;
 }
 
-.main-part {
-    margin-left: 108px;
-    width: 600px;
-    margin-top: 160px;
+.main-part{
+    position: relative;
+    left: 108px;
+    top: 160px
 }
 
 .main-text>h3 {
-    font-family: Inter;
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
+    max-width: 600px;
 }
 
 .main-text>p {
     font-family: SF Pro Text;
     font-size: 15px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px;
+    max-width: 600px;
 }
 
 .word-in-text {
@@ -34,6 +32,8 @@
 
 .consultation {
     display: inline-flex;
+    position: relative;
+    top: 80px;
     justify-content: space-between;
     padding: 24px;
     flex-direction: column;
@@ -43,17 +43,14 @@
     background-color: white;
     box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
-    margin-top: 64px;
 
 }
 
 .consultation>h3 {
     width: 600px;
     color: #101828;
-    font-family: Inter;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
     line-height: 24px;
 }
 
@@ -67,7 +64,6 @@
     font-family: SF Pro Text;
     font-size: 13px;
     font-style: normal;
-    font-weight: 500;
     line-height: 16px;
     margin-right: 24px;
 }
@@ -78,7 +74,6 @@
     font-family: SF Pro Text;
     font-size: 17px;
     font-style: normal;
-    font-weight: 400;
     line-height: 22px;
     border-bottom: #D0D5DD solid;
     border-width: 0px 0px 0.7px 0px;
@@ -92,13 +87,12 @@
     color: white;
     font-family: SF Pro Text;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
     line-height: 18px;
+    border: 0px;
 }
 
 
 .screenshot-block>img {
-    width: max-content;
-    height: max-content;
+    width: fit-content;
+    height: fit-content;
 }
