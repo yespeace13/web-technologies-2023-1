@@ -66,7 +66,7 @@
 
 .consultation-form input[type=tel],
 .consultation-form input[type=text] {
-    color: #101828;
+    color: #000000;
     font-family: SF Pro Text;
     font-size: 17px;
     font-style: normal;
@@ -76,7 +76,8 @@
     width: 200px;
 }
 
-.consultation-form input[type=submit] {
+.submit-button {
+    text-align: left;
     border-radius: 8px;
     background: #2D66EE;
     padding: 11px 24px;
