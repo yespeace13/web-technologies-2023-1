@@ -1,0 +1,56 @@
+.projects-block {
+    background-color: #F2F4F7;
+    padding-left: 108px;
+}
+
+.projects-title {
+    padding-top: 80px;
+}
+
+.projects-title>h2 {
+    margin-top: 0px;
+    margin-bottom: 27px;
+    max-width: 600px;
+}
+
+.number-in-project-text {
+    color: #306FF5;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.projects-categories {
+    font-family: SF Pro Text;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.categories-items {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.categories-items>li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.categories-items>li>img {
+    background-color: #FFF;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 16px;
+}
