@@ -21,28 +21,28 @@ header {
     align-self: center;
     gap: 80px;
     width: 1224px;
-}
 
-.main-head>h3 {
-    text-transform: uppercase;
-    color: #2D66EE;
-}
+    h3 {
+        text-transform: uppercase;
+        color: $colors-accent;
+    }
 
-.main-head>nav>ul {
-    display: flex;
-    flex-direction: row;
-    gap: 24px
-}
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
 
-.main-head>nav>ul>li>a {
-    text-decoration: none;
-    color: black;
+    nav > ul > li > a {
+        text-decoration: none;
+        color: $colors-base;
+    }
 }
 
 .contacts {
     display: flex;
     flex-direction: row;
-    color: #2D66EE;
+    color: $colors-accent;
     font-family: SF Pro Text;
     font-size: 14px;
     font-style: normal;
@@ -51,28 +51,24 @@ header {
     gap: 32px;
 }
 
-.phone-numbers-contact>a {
+.phone-numbers-contact > a {
     text-decoration: none;
     margin-right: 16px;
-
 }
 
-.phone-numbers-contact>img {
+.phone-numbers-contact > img {
     vertical-align: middle;
 }
 
-.email-contact>a {
+.email-contact > a {
     text-decoration: none;
 }
 
-.email-contact>img {
+.email-contact > img {
     vertical-align: middle;
 }
 
-
-
-@media(max-width: 1439px) {
-
+@media (max-width: 1439px) {
     .menu-burger,
     .phone-numbers-contact {
         display: none;
@@ -82,19 +78,6 @@ header {
         display: flex;
         flex-direction: column;
         gap: 8px;
-    }
-
-    .main-head>h3 {
-        font-size: 20;
-        font-family: "Inter", sans-serif;
-        font-weight: 700;
-        color: #2D66EE;
-        text-decoration: none;
-        white-space: nowrap;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     .email-contact {
@@ -108,6 +91,19 @@ header {
         padding: 24px 32px;
         justify-content: space-between;
         flex-shrink: 0;
+
+        h3 {
+            font-size: 20;
+            font-family: "Inter", sans-serif;
+            font-weight: 700;
+            color: $colors-accent;
+            text-decoration: none;
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     header {
@@ -118,8 +114,8 @@ header {
         width: 100%;
     }
 
-    .menu-head-burger span {
-        background: #2D66EE;
+    .menu-head-burger>span {
+        background: $colors-accent;
         width: 59px;
         height: 8px;
         flex-shrink: 0;
@@ -134,8 +130,7 @@ header {
     }
 }
 
-@media(max-width: 768px) {
-
+@media (max-width: 768px) {
     .menu-burger,
     .contacts {
         display: none;
@@ -145,15 +140,14 @@ header {
         display: flex;
         flex-direction: column;
         gap: 4px;
-    }
 
-    .menu-head-burger>span {
-        background: #2D66EE;
-        width: 40px;
-        height: 4px;
-        flex-shrink: 0;
+        span {
+            background: $colors-accent;
+            width: 40px;
+            height: 4px;
+            flex-shrink: 0;
+        }
     }
-
     .menu-head-burger:after {
         bottom: 4px;
     }

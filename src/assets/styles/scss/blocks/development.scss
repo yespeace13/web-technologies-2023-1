@@ -56,9 +56,9 @@
     line-height: 22px;
 }
 
-.dev-items>*:not(:last-child)::after {
+.dev-items > *:not(:last-child)::after {
     content: "/";
-    color: #2D66EE;
+    color: $colors-accent;
     padding: 0 4px;
 }
 
@@ -69,11 +69,11 @@
     top: -125px;
 }
 
-.list-of-stack>* {
+.list-of-stack > * {
     list-style-type: none;
     padding: 12px 0;
     display: flex;
-    color: #1d2939;
+    color: $colors-dark;
     font-family: SF Pro Text;
     font-size: 20px;
     font-style: normal;
@@ -82,16 +82,16 @@
     letter-spacing: 0.38px;
 }
 
-.list-of-stack>*::after {
+.list-of-stack > *::after {
     display: list-item;
     height: 24px;
     width: 24px;
     content: "";
     margin-left: 12px;
-    background: url(../icons/chevron_right_small_24.svg) no-repeat;
+    background: url(../../../icons/chevron_right_small_24.svg) no-repeat;
 }
 
-@media (max-width:1439px) {
+@media (max-width: 1439px) {
     .block-development {
         gap: 83px;
         padding-top: 32px;
@@ -99,7 +99,7 @@
         font-size: 28px;
     }
 
-    .development-cycle{
+    .development-cycle {
         gap: 120px;
     }
     .dev-items {
@@ -107,14 +107,13 @@
         max-width: 277px;
     }
 
-    .list-of-stack{
-        top: 0px
+    .list-of-stack {
+        top: 0px;
     }
 }
 
-@media (max-width:767px){
-
-    .development-cycle{
+@media (max-width: 767px) {
+    .development-cycle {
         flex-direction: column;
         gap: 32px;
     }
@@ -123,16 +122,5 @@
         gap: 32px;
         padding-top: 32px;
         padding-bottom: 52px;
-    }
-
-    .info-technologies__stack{
-        gap: 32px;
-    }
-
-    .info-technologies__stack h4{
-        font-family: SF-Pro-Display;
-    }
-    .info-technologies__development-list{
-        margin-top:auto;
     }
 }

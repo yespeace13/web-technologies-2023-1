@@ -2,11 +2,10 @@
 .block-main {
     display: flex;
     flex-direction: row;
-    background-color: #F2F4F7;
+    background-color: #f2f4f7;
     position: relative;
     max-width: 1224px;
     margin: auto;
-
 }
 
 .main-section {
@@ -20,10 +19,11 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    z-index: 1;
 }
 
 .word-in-text {
-    color: #2D66EE;
+    color: $colors-accent;
 }
 
 .consultation {
@@ -33,7 +33,9 @@
     padding: 24px;
     gap: 32px;
     background-color: white;
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16), 0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0px 0px 24px 0px rgba(0, 0, 0, 0.16),
+        0px 0px 2px 0px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
     margin-top: 64px;
     max-width: 724px;
@@ -44,24 +46,23 @@
     justify-content: space-between;
 }
 
-.consultation-form>label {
+.consultation-form > label {
     color: #667085;
     font-family: SF Pro Text;
     font-size: 13px;
     font-style: normal;
     line-height: 16px;
     margin-right: 24px;
-
 }
 
-.consultation-form input[type=tel],
-.consultation-form input[type=text] {
-    color: #000000;
+.consultation-form input[type="tel"],
+.consultation-form input[type="text"] {
+    color: $colors-base;
     font-family: SF Pro Text;
     font-size: 17px;
     font-style: normal;
     line-height: 22px;
-    border-bottom: #D0D5DD solid;
+    border-bottom: #d0d5dd solid;
     border-width: 0px 0px 0.7px 0px;
     width: 200px;
     margin-top: 8px;
@@ -70,7 +71,7 @@
 .submit-button {
     text-align: left;
     border-radius: 8px;
-    background: #2D66EE;
+    background: $colors-accent;
     color: white;
     font-family: SF Pro Text;
     font-size: 14px;
@@ -89,18 +90,55 @@
     width: 624px;
     flex-wrap: wrap;
     transform: rotate(-12deg);
+    z-index: 0;
 }
 
-.screenshot-block>div {
+.screenshot-block > div {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.screenshot-block>div>img {
+.screenshot-block > div > img {
     width: 292.226px;
     height: 632.767px;
     border-radius: 24px;
+}
+
+@keyframes slideUpLeft {
+    0% {
+        transform: translateY();
+    }
+    100% {
+        transform: translateY(-80%);
+    }
+}
+
+@keyframes slideDownRight {
+    0% {
+        transform: translateY();
+    }
+    100% {
+        transform: translateY(80%);
+    }
+}
+.screenshot-photo-left {
+    img {
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: slideDownRight;
+    }
+}
+.screenshot-photo-right {
+    img {
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: slideUpLeft;
+    }
 }
 
 @media (max-width: 1439px) {
@@ -118,7 +156,6 @@
         width: 382px;
         padding: 32px;
         font-size: 16px;
-
     }
 
     .consultation-form {
@@ -133,7 +170,7 @@
         left: 456px;
     }
 
-    .screenshot-block>div>img {
+    .screenshot-block > div > img {
         width: 137.93px;
         height: 298.663px;
     }
@@ -150,18 +187,17 @@
     .main-text {
         max-width: 383px;
         padding-top: 132px;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h5 {
+            margin-bottom: 536px;
+        }
     }
 
-
-    .main-text>h2 {
-        font-size: 28px;
-    }
-
-    .main-text>h5 {
-        margin-bottom: 536px;
-    }
-
-    .consultation-form{
+    .consultation-form {
         display: flex;
         width: 295px;
         flex-direction: column;
@@ -174,11 +210,11 @@
         z-index: 1;
     }
 
-    .consultation-form>label {
+    .consultation-form > label {
         max-width: 224px;
-        border-bottom: 1px #D0D5DD solid;
+        border-bottom: 1px #d0d5dd solid;
         color: #667085;
-        font-family: SF-Pro-Text;
+        font-family: SF Pro Text;
         font-size: 13px;
         font-style: normal;
         font-weight: 500;

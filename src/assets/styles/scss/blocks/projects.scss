@@ -1,19 +1,19 @@
 .projects-block {
-    background-color: #F2F4F7;
+    background-color: $colors-gray;
 }
 
 .projects-title {
     padding-top: 80px;
 }
 
-.projects-title>h2 {
+.projects-title > h2 {
     margin-top: 0px;
     margin-bottom: 27px;
     max-width: 600px;
 }
 
 .number-in-project-text {
-    color: #306FF5;
+    color: $colors-accent;
     font-family: Inter;
     font-size: 36px;
     font-style: normal;
@@ -30,7 +30,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0px;
     margin: 0px;
-
 }
 
 .categories-items {
@@ -38,15 +37,14 @@
     margin: 0px;
 }
 
-.categories-items>li {
+.categories-items > li {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
-
 }
 
-.categories-items>li>img {
-    background-color: #FFF;
+.categories-items > li > img {
+    background-color: $colors-background;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
     margin: 5px;
     border-radius: 50%;
@@ -60,7 +58,6 @@
 }
 
 @media (max-width: 1439px) {
-
     .projects-categories {
         display: flex;
         gap: 180px;
@@ -86,15 +83,14 @@
         margin: 0px;
     }
 
-    .items-adapt>li {
+    .items-adapt > li {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-
     }
 
-    .items-adapt>li>img {
-        background-color: #FFF;
+    .items-adapt > li > img {
+        background-color: $colors-background;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
         margin: 5px 5px 5px 0px;
         border-radius: 50%;
@@ -116,7 +112,6 @@
 }
 
 @media (max-width: 767px) {
-
     .projects-categories {
         display: flex;
         gap: 60px;
@@ -142,15 +137,14 @@
         margin: 0px;
     }
 
-    .items-adapt>li {
+    .items-adapt > li {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-
     }
 
-    .items-adapt>li>img {
-        background-color: #FFF;
+    .items-adapt > li > img {
+        background-color: $colors-background;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
         margin: 5px 5px 5px 0px;
         border-radius: 50%;

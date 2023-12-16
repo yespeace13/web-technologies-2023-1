@@ -1,0 +1,117 @@
+$custom-width: 176px;
+
+footer {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-radius: 12px;
+    background-color: $colors-dark;
+    box-shadow:
+        0px 2px 24px 0px rgba(0, 0, 0, 0.08),
+        0px 0px 2px 0px rgba(0, 0, 0, 0.08);
+    align-self: center;
+    padding: 24px;
+    margin-bottom: 48px;
+}
+
+footer > p {
+    color: $colors-background;
+    margin: 0px;
+
+    img {
+        vertical-align: middle;
+        margin-right: 12px;
+    }
+}
+
+.block-contact {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        color: #98a2b3;
+        font-family: SF Pro Text;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px;
+
+        img {
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+    }
+
+    span {
+        color: $colors-background;
+        font-family: SF Pro Text;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        width: 294px;
+    }
+}
+
+@media (max-width: 1439px) {
+    .contact-item {
+        display: flex;
+        width: $custom-width;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .contact-item > p {
+        width: $custom-width;
+    }
+
+    .contact-item > span {
+        width: $custom-width;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact-item {
+        display: flex;
+        width: 154px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 14px;
+
+        p {
+            width: 176px;
+        }
+
+        span {
+            width: $custom-width;
+        }
+    }
+
+    .block-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer {
+        margin-top: auto;
+        border-radius: 12px;
+        max-width: 767px;
+        margin-bottom: auto;
+        margin-left: 0;
+    }
+    .block-contact {
+        gap: 60px;
+    }
+}

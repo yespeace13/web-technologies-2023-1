@@ -1,18 +1,18 @@
-@import "./global.css";
-@import "./fonts.css";
-@import "./utils.css";
-@import "header.css";
-@import "main-form.css";
-@import "footer.css";
-@import "development.css";
-@import "projects.css";
-@import "proud.css";
-@import "discuss.css";
-@import url(fonts.css);
+@import "../global.css";
+@import "../fonts.css";
+@import "../utils.css";
+@import "const.scss";
+@import "blocks/header.scss";
+@import "blocks/main-form.scss";
+@import "blocks/footer.scss";
+@import "blocks/development.scss";
+@import "blocks/projects.scss";
+@import "blocks/proud.scss";
+@import "blocks/discuss.scss";
 
 body {
     margin: 0;
-    background-color: #F2F4F7;
+    background-color: $colors-gray;
 }
 
 main{
