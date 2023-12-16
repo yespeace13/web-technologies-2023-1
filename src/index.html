@@ -14,6 +14,11 @@
     <div class="container">
         <header>
             <div class="main-head">
+                <div class="menu-head-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <h3>It website</h3>
                 <nav class="menu-burger">
                     <ul>
@@ -38,13 +43,13 @@
             </div>
         </header>
     </div>
-    
+
 
     <main>
-        <div class="block-main">
-            <div class="main-part">
-                <section class="main-section">
-                    <article class="main-text">
+        <div class="main-back">
+            <div class="block-main container">
+                <div class="main-section">
+                    <div class="main-text">
                         <h2>
                             Developments of <span class="word-in-text">mobile</span>
                             <span class="word-in-text">applications</span> and <span class="word-in-text">web
@@ -55,8 +60,8 @@
                             We create mobile applications for IOS, Android that transfer your business to mobile
                             applications of your customers' devicess
                         </h5>
-                    </article>
-                    <article class="consultation">
+                    </div>
+                    <div class="consultation">
                         <h3>
                             Leave your contacts and we will call you back<br>
                             within 30 minutes
@@ -68,24 +73,28 @@
                                     placeholder="Иван Иванов"></input></label>
                             <button class="submit-button" type="submit">Get consultation</button>
                         </form>
-                    </article>
-                    <div class="screenshot-block">
-                        <img src="assets/img/nike.jpeg" alt="">
-                        <img src="assets/img/main.jpeg" alt="">
-                        <img src="assets/img/coment.jpeg" alt="">
-                        <img src="assets/img/main.jpeg" alt="">
-                        <img src="assets/img/messages.jpeg" alt="">
-                        <img src="assets/img/settings.jpeg" alt="">
                     </div>
-                </section>
+                    <div class="screenshot-block">
+                        <div>
+                            <img src="assets/img/nike.jpeg">
+                            <img src="assets/img/coment.jpeg">
+                            <img src="assets/img/messages.jpeg">
+                        </div>
+                        <div>
+                            <img src="assets/img/contacts.jpeg">
+                            <img src="assets/img/main.jpeg">
+                            <img src="assets/img/settings.jpeg">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="block-development-main">
-            <div class="block-development">
+            <div class="block-development container">
+                <h2>Full development cycle</h2>
+                <h5>We use proven technologies</h5>
                 <div class="development-cycle">
-                    <h2>Full development cycle</h2>
-                    <h5>We use proven technologies</h5>
                     <div class="development-stack">
                         <div class="dev-with-title">
                             <h3>Web</h3>
@@ -122,45 +131,66 @@
                             </ul>
                         </div>
                     </div>
+                    <ul class="list-of-stack">
+                        <li>IOS development</li>
+                        <li>Android development</li>
+                        <li>Web development</li>
+                        <li>UI/UX design</li>
+                        <li>Testing</li>
+                        <li>Launch</li>
+                        <li>IT consulting</li>
+                    </ul>
                 </div>
-                <ul class="list-of-stack">
-                    <li>IOS development</li>
-                    <li>Android development</li>
-                    <li>Web development</li>
-                    <li>UI/UX design</li>
-                    <li>Testing</li>
-                    <li>Launch</li>
-                    <li>IT consulting</li>
-                </ul>
             </div>
         </div>
 
         <div class="projects-block">
-            <div class="projects-title">
-                <h2>Developed more than <span class="number-in-project-text">100</span><br>
-                    projects in <span class="number-in-project-text">15</span> industries</h2>
-                <div class="projects-categories">
-                    <ul class="categories-items">
-                        <li><img src="assets/icons/narrative_active_outline_24.svg" /><span>Social media</span></li>
-                        <li><img src="assets/icons/ball_outline_24.svg" />Fitness and sport</li>
-                        <li><img src="assets/icons/bank_outline_24.svg" />Bank</li>
-                        <li><img src="assets/icons/employee_outline_24.svg" />Construction</li>
-                        <li><img src="assets/icons/game_outline_24.svg" />Game projects</li>
-                    </ul>
-                    <ul class="categories-items">
-                        <li><img src="assets/icons/education_outline_24.svg" />Education</li>
-                        <li><img src="assets/icons/car_outline_24.svg" />Auto, transport</li>
-                        <li><img src="assets/icons/health_outline_24.svg" />Medicine, health</li>
-                        <li><img src="assets/icons/bowl_sticks_outline_24.svg" />Restaurants, food delivery</li>
-                        <li><img src="assets/icons/Source.svg" />Marketplaces</li>
-                    </ul>
-                    <ul class="categories-items">
-                        <li><img src="assets/icons/live_outline_24.svg" />AR technology</li>
-                        <li><img src="assets/icons/video_outline_24.svg" />TV series</li>
-                        <li><img src="assets/icons/work_outline_24.svg" />Startups</li>
-                        <li><img src="assets/icons/magic_wand_outline_24.svg" />Religion</li>
-                        <li><img src="assets/icons/video_circle_outline_24.svg" />Online cources</li>
-                    </ul>
+            <div class="project-container container">
+                <div class="projects-title">
+                    <h2>Developed more than <span class="number-in-project-text">100</span><br>
+                        projects in <span class="number-in-project-text">15</span> industries</h2>
+                    <div class="projects-categories">
+                        <ul class="categories-items">
+                            <li><img src="assets/icons/narrative_active_outline_24.svg" /><span>Social media</span></li>
+                            <li><img src="assets/icons/ball_outline_24.svg" />Fitness and sport</li>
+                            <li><img src="assets/icons/bank_outline_24.svg" />Bank</li>
+                            <li><img src="assets/icons/employee_outline_24.svg" />Construction</li>
+                            <li><img src="assets/icons/game_outline_24.svg" />Game projects</li>
+                        </ul>
+                        <ul class="categories-items">
+                            <li><img src="assets/icons/education_outline_24.svg" />Education</li>
+                            <li><img src="assets/icons/car_outline_24.svg" />Auto, transport</li>
+                            <li><img src="assets/icons/health_outline_24.svg" />Medicine, health</li>
+                            <li><img src="assets/icons/bowl_sticks_outline_24.svg" />Restaurants, food delivery</li>
+                            <li><img src="assets/icons/Source.svg" />Marketplaces</li>
+                        </ul>
+                        <ul class="categories-items">
+                            <li><img src="assets/icons/live_outline_24.svg" />AR technology</li>
+                            <li><img src="assets/icons/video_outline_24.svg" />TV series</li>
+                            <li><img src="assets/icons/work_outline_24.svg" />Startups</li>
+                            <li><img src="assets/icons/magic_wand_outline_24.svg" />Religion</li>
+                            <li><img src="assets/icons/video_circle_outline_24.svg" />Online cources</li>
+                        </ul>
+                        <ul class="items-adapt">
+                            <li><img src="assets/icons/narrative_active_outline_24.svg" /><span>Social media</span></li>
+                            <li><img src="assets/icons/ball_outline_24.svg" />Fitness and sport</li>
+                            <li><img src="assets/icons/bank_outline_24.svg" />Bank</li>
+                            <li><img src="assets/icons/employee_outline_24.svg" />Construction</li>
+                            <li><img src="assets/icons/game_outline_24.svg" />Game projects</li>
+                            <li><img src="assets/icons/live_outline_24.svg" />AR technology</li>
+                            <li><img src="assets/icons/video_outline_24.svg" />TV series</li>
+                            <li><img src="assets/icons/video_circle_outline_24.svg" />Online cources</li>
+                        </ul>
+                        <ul class="items-adapt">
+                            <li><img src="assets/icons/education_outline_24.svg" />Education</li>
+                            <li><img src="assets/icons/car_outline_24.svg" />Auto, transport</li>
+                            <li><img src="assets/icons/health_outline_24.svg" />Medicine, health</li>
+                            <li><img src="assets/icons/bowl_sticks_outline_24.svg" />Restaurants, food delivery</li>
+                            <li><img src="assets/icons/Source.svg" />Marketplaces</li>
+                            <li><img src="assets/icons/work_outline_24.svg" />Startups</li>
+                            <li><img src="assets/icons/magic_wand_outline_24.svg" />Religion</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

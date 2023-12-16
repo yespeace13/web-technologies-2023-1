@@ -10,15 +10,18 @@
     max-width: 1224px;
     padding-top: 80px;
     padding-bottom: 82px;
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     width: 1224px;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .development-cycle {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 232px;
+    flex-direction: row;
 }
 
 .development-stack {
@@ -34,6 +37,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: 24px;
+    gap: 16px;
+    display: flex;
 }
 
 .dev-items {
@@ -60,6 +65,8 @@
 .list-of-stack {
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: -125px;
 }
 
 .list-of-stack>* {
@@ -82,4 +89,50 @@
     content: "";
     margin-left: 12px;
     background: url(../icons/chevron_right_small_24.svg) no-repeat;
+}
+
+@media (max-width:1439px) {
+    .block-development {
+        gap: 83px;
+        padding-top: 32px;
+        padding-bottom: 35px;
+        font-size: 28px;
+    }
+
+    .development-cycle{
+        gap: 120px;
+    }
+    .dev-items {
+        font-size: 14px;
+        max-width: 277px;
+    }
+
+    .list-of-stack{
+        top: 0px
+    }
+}
+
+@media (max-width:767px){
+
+    .development-cycle{
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .block-development {
+        gap: 32px;
+        padding-top: 32px;
+        padding-bottom: 52px;
+    }
+
+    .info-technologies__stack{
+        gap: 32px;
+    }
+
+    .info-technologies__stack h4{
+        font-family: SF-Pro-Display;
+    }
+    .info-technologies__development-list{
+        margin-top:auto;
+    }
 }

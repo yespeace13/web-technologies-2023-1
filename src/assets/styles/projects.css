@@ -1,6 +1,5 @@
 .projects-block {
     background-color: #F2F4F7;
-    /* padding-left: 108px; */
 }
 
 .projects-title {
@@ -35,7 +34,6 @@
 }
 
 .categories-items {
-    list-style-type: none;
     padding: 0px;
     margin: 0px;
 }
@@ -44,13 +42,131 @@
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+
 }
 
 .categories-items>li>img {
     background-color: #FFF;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
-    padding: 10px;
+    margin: 5px;
     border-radius: 50%;
     vertical-align: middle;
-    margin-right: 16px;
+    box-sizing: unset;
+    padding: 10px;
+}
+
+.items-adapt {
+    display: none;
+}
+
+@media (max-width: 1439px) {
+
+    .projects-categories {
+        display: flex;
+        gap: 180px;
+        min-height: 601px;
+        padding: 0;
+    }
+
+    .number-in-project-text {
+        font-size: 28px;
+    }
+
+    .projects-title {
+        max-width: 380px;
+    }
+
+    .categories-items {
+        display: none;
+    }
+
+    .items-adapt {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .items-adapt>li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+    }
+
+    .items-adapt>li>img {
+        background-color: #FFF;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+        margin: 5px 5px 5px 0px;
+        border-radius: 50%;
+        vertical-align: middle;
+        box-sizing: unset;
+        padding: 10px;
+    }
+
+    .projects-categories {
+        margin-top: 48px;
+        max-width: 601px;
+        display: flex;
+    }
+
+    .projects-categories {
+        padding-top: 45px;
+        padding-bottom: 44px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .projects-categories {
+        display: flex;
+        gap: 60px;
+        min-height: 601px;
+        padding: 0;
+    }
+
+    .number-in-project-text {
+        font-size: 28px;
+    }
+
+    .projects-title {
+        max-width: 380px;
+    }
+
+    .categories-items {
+        display: none;
+    }
+
+    .items-adapt {
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .items-adapt>li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+
+    }
+
+    .items-adapt>li>img {
+        background-color: #FFF;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+        margin: 5px 5px 5px 0px;
+        border-radius: 50%;
+        vertical-align: middle;
+        box-sizing: unset;
+        padding: 10px;
+    }
+
+    .projects-categories {
+        margin-top: 48px;
+        max-width: 601px;
+        display: flex;
+    }
+
+    .projects-categories {
+        padding-top: 45px;
+        padding-bottom: 44px;
+    }
 }
