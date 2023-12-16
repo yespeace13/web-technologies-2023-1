@@ -12,28 +12,19 @@
 
 body {
     margin: 0;
-    min-height: 100vh;
     background-color: #F2F4F7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-header{
-    align-self: center;
-    max-width: 1224px;
-}
 main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
-footer{
+.container{
     max-width: 1224px;
-
+    margin: 0 auto;
 }
+
 img {
     height: 24px;
     width: 24px;
@@ -86,9 +77,29 @@ button {
     padding: 11px 24px;
 }
 
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 button>*{
     margin: 0px;
     padding: 0px;
+}
+
+@media (max-width: 1439px) {
+    .container{
+        max-width: 702px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px){
+    .container{
+        max-width: 383px;
+        margin: 0 auto;
+    }
 }
 
 
