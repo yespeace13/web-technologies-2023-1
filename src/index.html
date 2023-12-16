@@ -11,119 +11,128 @@
 </head>
 
 <body>
-    <header>
-        <div class="main-head">
-            <h3>It website</h3>
-            <nav>
-                <ul>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Media</a></li>
-                    <li><a href="#">Cases</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Contacts</a></li>
-                </ul>
-            </nav>
-            <div class="contacts">
-                <div class="phone-numbers-contact">
-                    <img src="assets/icons/smartphone_outline_24_blue.svg">
-                    <a href="#"> +7 (111) 111 11 11</a>
-                    <a href="#">+7 (111) 111 11 11</a>
-                </div>
-                <div class="email-contact">
-                    <img src="assets/icons/mail_outline_24_blue.svg"></img>
-                    <a href="#">itcompany@mail.com</a></li>
+    <div class="container">
+        <header>
+            <div class="main-head">
+                <h3>It website</h3>
+                <nav class="menu-burger">
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Cases</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="contacts">
+                    <div class="phone-numbers-contact">
+                        <img src="assets/icons/smartphone_outline_24_blue.svg">
+                        <a href="#"> +7 (111) 111 11 11</a>
+                        <a href="#">+7 (111) 111 11 11</a>
+                    </div>
+                    <div class="email-contact">
+                        <img src="assets/icons/mail_outline_24_blue.svg"></img>
+                        <a href="#">itcompany@mail.com</a></li>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
+    
 
     <main>
         <div class="block-main">
             <div class="main-part">
-                <div class="main-text">
-                    <h2>
-                        Developments of <span class="word-in-text">mobile</span>
-                        <span class="word-in-text">applications</span> and <span class="word-in-text">web
-                            services</span> of
-                        any complexity
-                    </h2>
-                    <h5>
-                        We create mobile applications for IOS, Android that transfer your business to mobile
-                        applications of your customers' devicess
-                    </h5>
-                </div>
-
-                <div class="consultation">
-                    <h3>
-                        Leave your contacts and we will call you back<br>
-                        within 30 minutes
-                    </h3>
-                    <div class="consultation-form">
-                        <form>
+                <section class="main-section">
+                    <article class="main-text">
+                        <h2>
+                            Developments of <span class="word-in-text">mobile</span>
+                            <span class="word-in-text">applications</span> and <span class="word-in-text">web
+                                services</span> of
+                            any complexity
+                        </h2>
+                        <h5>
+                            We create mobile applications for IOS, Android that transfer your business to mobile
+                            applications of your customers' devicess
+                        </h5>
+                    </article>
+                    <article class="consultation">
+                        <h3>
+                            Leave your contacts and we will call you back<br>
+                            within 30 minutes
+                        </h3>
+                        <form class="consultation-form">
                             <label>Phone number<input type="tel" name="phone-number"
                                     placeholder="+7 (111) 111 11 11"></input></label>
                             <label>Full name<input type="text" name="full-name"
                                     placeholder="Иван Иванов"></input></label>
                             <button class="submit-button" type="submit">Get consultation</button>
                         </form>
+                    </article>
+                    <div class="screenshot-block">
+                        <img src="assets/img/nike.jpeg" alt="">
+                        <img src="assets/img/main.jpeg" alt="">
+                        <img src="assets/img/coment.jpeg" alt="">
+                        <img src="assets/img/main.jpeg" alt="">
+                        <img src="assets/img/messages.jpeg" alt="">
+                        <img src="assets/img/settings.jpeg" alt="">
                     </div>
-                </div>
-            </div>
-            <div class="screenshot-block">
-                <img src="assets/img/Group 1.png" />
+                </section>
             </div>
         </div>
 
-        <div class="block-development">
-            <div class="development-cycle">
-                <h2>Full development cycle</h2>
-                <h5>We use proven technologies</h5>
-                <div class="development-stack">
-                    <div class="dev-with-title">
-                        <h3>Web</h3>
-                        <ul class="dev-items">
-                            <li>PHP</li>
-                            <li>Javascript</li>
-                            <li>Node JS</li>
-                            <li>Web Socket</li>
-                            <li>Socket.io</li>
-                            <li>Vue.js</li>
-                            <li>Nuxt</li>
-                            <li>MySQL</li>
-                            <li>Laravel</li>
-                            <li>GO lang</li>
-                            <li>django</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
-                    <div class="dev-with-title">
-                        <h3>Mobile</h3>
-                        <ul class="dev-items">
-                            <li>Swift</li>
-                            <li>Kotlin</li>
-                            <li>Alamofire</li>
-                            <li>Firebase</li>
-                            <li>CoreData</li>
-                            <li>Room</li>
-                            <li>Realm</li>
-                            <li>Coroutine</li>
-                            <li>RxJava</li>
-                            <li>RxSwift</li>
-                            <li>UnitTest</li>
-                            <li>Navigation</li>
-                        </ul>
+        <div class="block-development-main">
+            <div class="block-development">
+                <div class="development-cycle">
+                    <h2>Full development cycle</h2>
+                    <h5>We use proven technologies</h5>
+                    <div class="development-stack">
+                        <div class="dev-with-title">
+                            <h3>Web</h3>
+                            <ul class="dev-items">
+                                <li>PHP</li>
+                                <li>Javascript</li>
+                                <li>Node JS</li>
+                                <li>Web Socket</li>
+                                <li>Socket.io</li>
+                                <li>Vue.js</li>
+                                <li>Nuxt</li>
+                                <li>MySQL</li>
+                                <li>Laravel</li>
+                                <li>GO lang</li>
+                                <li>django</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <div class="dev-with-title">
+                            <h3>Mobile</h3>
+                            <ul class="dev-items">
+                                <li>Swift</li>
+                                <li>Kotlin</li>
+                                <li>Alamofire</li>
+                                <li>Firebase</li>
+                                <li>CoreData</li>
+                                <li>Room</li>
+                                <li>Realm</li>
+                                <li>Coroutine</li>
+                                <li>RxJava</li>
+                                <li>RxSwift</li>
+                                <li>UnitTest</li>
+                                <li>Navigation</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <ul class="list-of-stack">
+                    <li>IOS development</li>
+                    <li>Android development</li>
+                    <li>Web development</li>
+                    <li>UI/UX design</li>
+                    <li>Testing</li>
+                    <li>Launch</li>
+                    <li>IT consulting</li>
+                </ul>
             </div>
-            <ul class="list-of-stack">
-                <li>IOS development</li>
-                <li>Android development</li>
-                <li>Web development</li>
-                <li>UI/UX design</li>
-                <li>Testing</li>
-                <li>Launch</li>
-                <li>IT consulting</li>
-            </ul>
         </div>
 
         <div class="projects-block">
@@ -328,28 +337,30 @@
         </div>
     </main>
 
-    <footer>
-        <h2 style="text-transform: uppercase; color: white;">it website</h2>
-        <div class="block-contact">
-            <div class="contact-item">
-                <p><img src="assets/icons/smartphone_outline_24.svg">Contact nums</p></img>
-                <span>+7(778)395 90 26</span>
+    <div class="container">
+        <footer>
+            <h2 style="text-transform: uppercase; color: white;">it website</h2>
+            <div class="block-contact">
+                <div class="contact-item">
+                    <p><img src="assets/icons/smartphone_outline_24.svg">Contact nums</p></img>
+                    <span>+7(778)395 90 26</span>
+                </div>
+                <div class="contact-item">
+                    <p><img src="assets/icons/mail_outline_24.svg">Post</img></p>
+                    <span>mail@mail.com</span>
+                </div>
+                <div class="contact-item">
+                    <p><img src="assets/icons/place_outline_24.svg">Address</img></p>
+                    <span>City city, street st. 90</span>
+                </div>
+                <div class="contact-item">
+                    <p><img src="assets/icons/document_outline_24.svg">Leave a request</img></p>
+                    <span>Leave a request</span>
+                </div>
             </div>
-            <div class="contact-item">
-                <p><img src="assets/icons/mail_outline_24.svg">Post</img></p>
-                <span>mail@mail.com</span>
-            </div>
-            <div class="contact-item">
-                <p><img src="assets/icons/place_outline_24.svg">Address</img></p>
-                <span>City city, street st. 90</span>
-            </div>
-            <div class="contact-item">
-                <p><img src="assets/icons/document_outline_24.svg">Leave a request</img></p>
-                <span>Leave a request</span>
-            </div>
-        </div>
-        <p><img src="assets/icons/Vector.svg">We work throughout world</img></p>
-    </footer>
+            <p><img src="assets/icons/Vector.svg">We work throughout world</img></p>
+        </footer>
+    </div>
 </body>
 
 </html>
