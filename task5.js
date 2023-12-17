@@ -17,7 +17,7 @@ function treePrefix(prefix, words, prefixes) {
 }
 
 function findPrefix(words) {
-    prefixes = Array.from(treePrefix(words[0], words, new Set()))
+    prefixes = Array.from(returnPrefix(words[0], words, new Set()))
     return prefixes.length != 0 ? prefixes.sort((a, b) => { return b.length - a.length })[0] : ""
 }
 
