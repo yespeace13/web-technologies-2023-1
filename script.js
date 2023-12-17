@@ -103,6 +103,7 @@ function init() {
             //если hasChildren, то запускаем renderParent
             //если !hasChildren, то запускаем renderChildren
             //возвращает рендер родительского элемента
+            
 
         }
 
