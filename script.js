@@ -1,144 +1,97 @@
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init)
-} else {
-    init()
-}
+class Pizza {
 
-function init() {
-    const data = {
-        name: 'Каталог товаров',
-        hasChildren: true,
-        items: [
-            {
-                name: 'Мойки',
-                hasChildren: true,
-                items: [
-                    {
-                        name: 'Ulgran1',
-                        hasChildren: true,
-                        items: [
-                            {
-                                name: 'SMT1',
-                                hasChildren: false,
-                                items: []
-                            },
-                            {
-                                name: 'SMT2',
-                                hasChildren: false,
-                                items: []
-                            }
-                        ]
-                    },
-                    {
-                        name: 'Ulgran2',
-                        hasChildren: true,
-                        items: [
-                            {
-                                name: 'SMT3',
-                                hasChildren: false,
-                                items: []
-                            },
-                            {
-                                name: 'SMT4',
-                                hasChildren: false,
-                                items: []
-                            }
-                        ]
-                    }
-                ]
-            },{
-                name: 'Фильтры',
-                hasChildren: true,
-                items: [
-                    {
-                        name: 'Ulgran3',
-                        hasChildren: true,
-                        items: [
-                            {
-                                name: 'SMT5',
-                                hasChildren: false,
-                                items: []
-                            },
-                            {
-                                name: 'SMT6',
-                                hasChildren: false,
-                                items: []
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
+    constructor(name, price, calories) {
+        this.name = name;
+        this.price = price;
+        this.calories = calories;
+        this.toppings = [];
+        this.size = null;
+        this.stuffing = null;
     }
 
+    addTopping(topping) {
+        // Добавить добавку 
+        this.toppings.push(topping);
+    };
 
-    const items = new ListItems(document.getElementById('list-items'), data)
-
-
-    items.render()
-    items.init()
-
-    console.log(items.renderTest(data))
-
-    function ListItems(el, data) {
-        this.el = el;
-        this.data = data;
-
-        this.init = function () {
-            const parents = this.el.querySelectorAll('[data-parent]')
-
-            parents.forEach(parent => {
-                const open = parent.querySelector('[data-open]')
-
-                if (open) {
-                    open.addEventListener("click", () => this.toggleItems(parent));
-                  }
-            })
+    removeTopping(topping) {
+        // Убрать добавку 
+        const index = this.toppings.indexOf(topping);
+        if (index !== -1) {
+            this.toppings.pop();
         }
+    }
 
-        this.render = function () {
-            this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data))
-        }
+    getToppings(topping) {
+        // Получить список добавок
+        return this.toppings;
+    }
 
-        this.renderParent = function (data) {
-            //проверка всех элементов на hasChildren
-            //если hasChildren, то запускаем renderParent
-            //если !hasChildren, то запускаем renderChildren
-            //возвращает рендер родительского элемента
+    getSize() {
+        // Узнать вид пиццы
+        return this.size;
+    }
 
-            let html = this.renderChildren(data);
+    getStuffing() {
+        // Узнать размер пиццы 
+        return this.stuffing;
+    }
 
-            if (data.hasChildren) {
-                html += '<div class="list-item__items">';
-                data.items.forEach((child) => {
-                    html += this.renderParent(child);
-            });
-            html += "</div>";
-            }
-            
-        html += "</div>";
-        return html;
-        }
+    calculatePrice() {
+        // Узнать цену
+        let finalPrice = this.size === sizes.BIG ? this.price + 200 : this.price + 100;
+        this.toppings.forEach(topping => {
+            finalPrice += (topping.types.find(type => type.size === this.size)).price
+        });
+        return finalPrice;
+    }
 
-        this.renderChildren = function (data) {
-            //вовзращает рендер элемента без вложенности
-            return `<div class="list-item list-item_open" data-parent>
-            <div class="list-item__inner">
-                <img class="list-item__arrow" src="img/chevron-down.png" alt="chevron-down" data-open>
-                <img class="list-item__folder" src="img/folder.png" alt="folder">
-                <span>${data.name}</span>
-            </div>`;
-        }
-
-        this.toggleItems = function (parent) {
-            parent.classList.toggle('list-item_open')
-        }
-
-/*        this.renderTest = function (data) {
-            return `
-            <div class="test">${data.name}</div>
-            `
-        }*/
+    calculateCalories() {
+        // Узнать калорийность
+        let finalCalories = this.size === sizes.BIG ? this.calories + 200 : this.calories + 100;
+        this.toppings.forEach(topping => {
+            finalCalories += (topping.types.find(type => type.size === this.size)).calories
+        });
+        return finalCalories;
     }
 
 }
+
+class Topping {
+    constructor(name, types) {
+        this.name = name;
+        this.types = types;
+    }
+}
+
+class TypeTopping {
+    constructor(size, price, calories) {
+        this.size = size;
+        this.price = price;
+        this.calories = calories;
+    }
+}
+
+const sizes = { BIG: 'Большая', SMALL: 'Маленькая' };
+
+const pizzies = {
+    margarita: new Pizza("Маргарита", 500, 300),
+    pepperoni: new Pizza("Пепперони", 800, 400),
+    bavarskaya: new Pizza("Баварская", 700, 450)
+};
+
+
+const toppings = {
+    CREAMY_MOZARELLA: new Topping("Cливочная моцарелла", [new TypeTopping(sizes.BIG, 50, 20), new TypeTopping(sizes.SMALL, 50, 20)]),
+    CHEESE_FOREST: new Topping("Сырный борт", [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
+    CHEDDAR_AND_PARMESAN: new Topping("Чедер и пармезан", 700, 450, [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
+};
+
+
+const pizza = pizzies.margarita;
+pizza.size = sizes.SMALL;
+pizza.addTopping(toppings.CREAMY_MOZARELLA)
+pizza.addTopping(toppings.CHEESE_FOREST)
+
+console.log(pizza.calculatePrice()); //800
+console.log(pizza.calculateCalories()); //470
