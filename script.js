@@ -84,7 +84,7 @@ const pizzies = {
 const toppings = {
     CREAMY_MOZARELLA: new Topping("Cливочная моцарелла", [new TypeTopping(sizes.BIG, 50, 20), new TypeTopping(sizes.SMALL, 50, 20)]),
     CHEESE_FOREST: new Topping("Сырный борт", [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
-    CHEDDAR_AND_PARMESAN: new Topping("Чедер и пармезан", 700, 450, [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
+    CHEDDAR_AND_PARMESAN: new Topping("Чедер и пармезан", [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
 };
 
 
