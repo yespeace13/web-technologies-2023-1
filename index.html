@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="select_pizza_block">
+            <div class="pizza-buttons">
+                <button onclick="createPizza('margarita')" id="pizzaSelector1">
+                    <img src="img/istockphoto-1168754685-612x612.jpg" /><br>Маргарита</button>
+                <button onclick="createPizza('pepperoni')" id="pizzaSelector2">
+                    <img src="img/6-1300.jpg" /><br>Пепперони</button>
+                <button onclick="createPizza('bavarskaya')" id="pizzaSelector3">
+                    <img src="img/bavarskaya11.674eb33bb094e3c5218a9abfe183d619.jpg" /><br>Баварская</button>
+            </div>
+        </div>
+
+        <div class="customize-block">
+            <div class="select_size_block">
+                <h1>Выберите размер</h1>
+                <label class="toggle">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                    <span class="labels" data-on="Маленькая" data-off="Большая"></span>
+                  </label>
+                <!-- <div class="rate">
+                    <input onclick="changeSize()" type="radio" name="size" value="SMALL" checked="checked">Маленькая
+                    <input onclick="changeSize()" type="radio" name="size" value="BIG">Большая
+                </div> -->
+            </div>
+
+            <div class="select_topping_block">
+                <h2>Добавить по вкусу</h2>
+                <div class="toppings_buttons">
+                    <button onclick="addTopping('CHEESE_FOREST')" class="color-change-btn">
+                        <img src="img/cheese.jpg" /><br>Сырный бортик</button>
+                    <button onclick="addTopping('CREAMY_MOZARELLA')" class="color-change-btn">
+                        <img src="img/mozarella.jpg" /><br>Сливочный моцарелла</button>
+                    <button onclick="addTopping('CHEDDAR_AND_PARMESAN')" class="color-change-btn">
+                        <img src="img/chedder.jpg" /><br>Чаддер и пармезан</button>
+                </div>
+            </div>
+            <div>
+                <button id="basket_button">Добавить в корзину за 0 ₽(0 кКалл)</button>
+            </div>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

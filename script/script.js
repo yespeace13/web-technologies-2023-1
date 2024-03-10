@@ -4,25 +4,26 @@ class Pizza {
         this.name = name;
         this.price = price;
         this.calories = calories;
-        this.toppings = [];
+        this.toppings = new Set();
         this.size = null;
         this.stuffing = null;
     }
 
     addTopping(topping) {
         // Добавить добавку 
-        this.toppings.push(topping);
+        this.toppings.add(topping);
     };
 
     removeTopping(topping) {
         // Убрать добавку 
-        const index = this.toppings.indexOf(topping);
-        if (index !== -1) {
-            this.toppings.pop();
-        }
+        this.toppings.delete(topping);
     }
 
-    getToppings(topping) {
+    setSize(size) {
+        this.size = size
+    }
+
+    getToppings() {
         // Получить список добавок
         return this.toppings;
     }
@@ -84,14 +85,41 @@ const pizzies = {
 const toppings = {
     CREAMY_MOZARELLA: new Topping("Cливочная моцарелла", [new TypeTopping(sizes.BIG, 50, 20), new TypeTopping(sizes.SMALL, 50, 20)]),
     CHEESE_FOREST: new Topping("Сырный борт", [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
-    CHEDDAR_AND_PARMESAN: new Topping("Чедер и пармезан", 700, 450, [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
+    CHEDDAR_AND_PARMESAN: new Topping("Чедер и пармезан", [new TypeTopping(sizes.SMALL, 150, 50), new TypeTopping(sizes.BIG, 300, 50)]),
 };
 
+var pizza;
 
-const pizza = pizzies.margarita;
-pizza.size = sizes.SMALL;
-pizza.addTopping(toppings.CREAMY_MOZARELLA)
-pizza.addTopping(toppings.CHEESE_FOREST)
+function createPizza(name) {
+    pizza = pizzies[name];
+    var size = document.querySelector('input[name="size"]:checked').value;
+    pizza.size = sizes[size];
+    updatePrice();
+}
 
-console.log(pizza.calculatePrice()); //800
-console.log(pizza.calculateCalories()); //470
+function changeSize() {
+    if (pizza.size === sizes.SMALL) {
+        pizza.setSize(sizes.BIG);
+    } else {
+        pizza.setSize(sizes.SMALL);
+    }
+    updatePrice();
+}
+
+function addTopping(name) {
+    if (pizza === undefined) return;
+    const topping = toppings[name];
+    if (pizza.getToppings().has(topping)) {
+        pizza.removeTopping(topping)
+    } else {
+        pizza.addTopping(topping);
+    }
+    updatePrice();
+}
+
+function updatePrice() {
+    var b = document.getElementById("basket_button");
+    const price = pizza.calculatePrice();
+    const calories = pizza.calculateCalories();
+    b.innerText = `Добавить в корзину за: ${price} ₽ (${calories} кКалл)`;
+}

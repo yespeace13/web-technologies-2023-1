@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.select_pizza_block{
+    margin-top: 25px;
+}
+
+.pizza-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.pizza-buttons>button{
+    background-color: white;
+    border: 0px;
+}
+
+.pizza-buttons>button:focus{
+    background-color: gainsboro;
+}
+
+.pizza-buttons>button>img {
+    width: 150px;
+}
+
+#basket_button {
+    font-size: 16pt;
+    background-color: orange;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.customize-block{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.toppings_buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.color-change-btn>img{
+    width: 75px;
+}
