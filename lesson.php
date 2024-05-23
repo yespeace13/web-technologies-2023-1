@@ -9,7 +9,7 @@ function getCurrentTime(): string
     $minutes = date('i');
 
 
-    if (($hours > 4 && $hours <= 20) || $hours == 0) {
+    if (($hours > 4 && $hours < 21) || $hours == 0) {
         $hoursText = ' часов ';
     } elseif (($hours > 1 && $hours < 5) || ($hours > 21 && $hours < 25)) {
         $hoursText = ' часа ';
@@ -22,6 +22,8 @@ function getCurrentTime(): string
             $minutesText = ' минута';
         else if ($minutes % 10 == 2 || $minutes % 10 == 3 || $minutes % 10 == 4)
             $minutesText = ' минуты';
+        else
+            $minutesText = ' минут';
     } else {
         $minutesText = ' минут';
     }
