@@ -1,7 +1,7 @@
 import Auth from "../services/auth.js";
 import location from "../services/location.js";
 import loading from "../services/loading.js";
-import todos from "../services/todos.js";
+import todosService from "../services/todos.js";
 import Form from "../components/form.js";
 
 const init = async () => {
@@ -33,13 +33,13 @@ const init = async () => {
 
         todoHTML.classList.add('todo');
         todoCheckbox.setAttribute('type', 'checkbox');
-        todoCheckbox.classList.add('todo__checkbox');
+        todoCheckbox.classList.add('todo-checkbox');
         todoCheckbox.checked = todo.completed;
         todoCheckbox.onchange = async function (event) {
             loading.start();
             const checkboxValue = event.target.checked;
             event.target.checked = !event.target.checked;
-            const response = await todos.updateStatusById(todo.id, checkboxValue);
+            const response = await todosService.updateStatusById(todo.id, checkboxValue);
             loading.stop();
             if (response) {
                 event.target.checked = !event.target.checked;
@@ -47,15 +47,15 @@ const init = async () => {
                 alert('Ошибка при отправке запроса на сервер.');
             }
         }
-        todoDescription.classList.add('todo__description');
+        todoDescription.classList.add('todo-description');
         todoDescription.innerText = todo.description;
-        todoRemoveButton.classList.add('todo__remove');
+        todoRemoveButton.classList.add('button');
         todoRemoveButton.innerText = 'Удалить';
         todoRemoveButton.onclick = async function (event) {
             const response = confirm('Вы уверены?');
             if (response) {
                 loading.start();
-                await todos.deleteById(todo.id);
+                await todosService.deleteById(todo.id);
                 await createTodoList();
             }
         }
@@ -67,7 +67,7 @@ const init = async () => {
         return todoHTML;
     }
     const createTodoList = async () => {
-        const todos = await todos.getAll();
+        const todos = await todosService.getAll();
         document.querySelector('.todo-list').innerHTML = '';
         loading.stop();
         todos.forEach(todo => {
@@ -79,12 +79,12 @@ const init = async () => {
 
     const addTodo = async (description) => {
         loading.start();
-        const response = await todos.create(description);
+        const response = await todosService.create(description);
         //console.log(response);
         if (response.ok) {
             await createTodoList();
         } else {
-            console.log('Ошибка добавления Todo');
+            console.log('Ошибка добавления');
         }
     }
 
