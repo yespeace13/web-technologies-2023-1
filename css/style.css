@@ -1,0 +1,10 @@
+.photos{
+    display: flex;
+    gap: 25px;
+    margin: auto;
+}
+
+.photo *{
+    width: 150px;
+    height: 150px;
+}
